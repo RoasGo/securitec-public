@@ -1,0 +1,9 @@
+default:
+  service:
+    name: sr-public
+    port: 4001
+    jwt: 
+    external: 
+      email: http://localhost:4000
+  metadata:
+    enviroment: local
