@@ -4,6 +4,6 @@ default:
     port: 4001
     jwt: 
     external: 
-      email: https://securitec-email-sender.herokuapp.com/
+      email: https://securitec-email-sender.herokuapp.com
   metadata:
     enviroment: pro

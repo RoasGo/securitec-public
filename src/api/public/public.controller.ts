@@ -10,7 +10,7 @@ export default class EmailsController {
 
     const [err] = await to(EmailsService.send(body));
     if (err) {
-      return InternalError(res);
+      return InternalError(res, err);
     }
 
     return Ok(res, { message: 'Emails will be send!' });
