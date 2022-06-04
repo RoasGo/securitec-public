@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "lint": "npm start lint",
-    "start": "nps",
+    "start": "cd dist && env NODE_ENV=production node ./src/index.js",
     "dev": "npm start dev",
-    "build": "npm start build",
+    "build": "nps build",
     "test": "npm start test",
     "clean": "npm start clean",
     "release": "npm start release"
@@ -63,7 +63,7 @@
     "hooks": {
       "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS",
       "pre-commit": "lint-staged",
-      "pre-push": "npm run build"
+      "pre-push": "nps build"
     }
   }
 }

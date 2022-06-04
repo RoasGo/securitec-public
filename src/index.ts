@@ -8,7 +8,7 @@ const logger = Logger.getLogger('app');
 
 (async () => {
   const host = '0.0.0.0';
-  const port = config.service.port;
+  const port = +process.env.PORT || config.service.port;
 
   app.listen(port, host, () => {
     logger.info(`<${artifactInfo.name}> is listening on ${host}:${port}`);
